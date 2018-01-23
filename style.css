@@ -1,18 +1,26 @@
 html {
     box-sizing: border-box;
-    font-size: 10px;
-    background: #ffc600;
+    background: linear-gradient(135deg, #43C6AC 0%, #191654 100%) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+.container {
+    margin-top: 40px;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    width:750px;
+    height:770px;
+    border-radius:20px;
+}
 .photobooth {
-    background: white;
-    max-width: 150rem;
-    margin: 2rem auto;
-    border-radius: 2px;
+    margin: 20px auto;
 }
 .photobooth:after {
     content: '';
@@ -21,13 +29,14 @@ html {
 }
 .photo {
     width: 100%;
-    float: left;
+    margin: 20px;
+    border-radius: 10px;
 }
 .player {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 200px;
+    width: 300px;
 }
 .strip {
     padding: 2rem;
@@ -38,6 +47,18 @@ html {
     padding: 0.8rem, 0.8rem, 2.5rem, 0.8rem;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     background: white;
+}
+
+.rgb {
+    margin : 10px;
+    font-size: 20px;
+}
+
+#takePhoto {
+    margin-top: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .strip a:nth-child(5n+1) img { transform: rotate(10deg); }
